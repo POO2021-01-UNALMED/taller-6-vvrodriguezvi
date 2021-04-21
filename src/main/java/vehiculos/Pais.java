@@ -14,7 +14,7 @@ public class Pais {
 		listaP.add(this);
 	}
 	public Pais() {
-		this.nombre = null;
+		
 		listaP.add(this);
 	}
 	
