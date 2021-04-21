@@ -5,7 +5,7 @@ import java.util.*;
 public class Pais {
 	private String nombre;
 	private static ArrayList<Pais> listaP = new ArrayList<Pais>(); 
-	private int cantidadPaises = 0;
+	private int vehiculosFabricados = 0;
 	
 	// constructores
 	
@@ -18,7 +18,8 @@ public class Pais {
 		listaP.add(this);
 	}
 	
-
+	// GETTERS AND SETTERS
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -32,21 +33,22 @@ public class Pais {
 	public static void setListaP(ArrayList<Pais> listaP) {
 		Pais.listaP = listaP;
 	}
+	
+	
+	// PAIS MAS VENDEDOR
+	
 	public void fabricarVehiculo() {
-		this.cantidadPaises++;
+		this.vehiculosFabricados++;
 	}
 	
-	public int getCantidadPaises() {
-		return this.cantidadPaises;
+	public int getVehiculosFabricados() {
+		return this.vehiculosFabricados;
 	}
-	
-	// metodos
-	
 	
 	public static Pais paisMasVendedor() {
 		Pais ganador = new Pais();
-		for(int i = 0; i < listaP.size(); i++) {
-			if(listaP.get(i).getCantidadPaises()> ganador.getCantidadPaises()) {
+		for (int i = 0; i < listaP.size(); i++) {
+			if (listaP.get(i).getVehiculosFabricados() > ganador.getVehiculosFabricados()) {
 				ganador = listaP.get(i);
 			}
 		}

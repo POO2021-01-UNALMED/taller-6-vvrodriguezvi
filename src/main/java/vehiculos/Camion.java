@@ -8,6 +8,7 @@ public class Camion extends Vehiculo{
 	// constructores
 	
 	public Camion() {
+		super();
 		cantidadCamiones++;
 	}
 	
