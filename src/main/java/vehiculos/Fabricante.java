@@ -11,7 +11,6 @@ public class Fabricante {
 	// constructores
 	
 	public Fabricante(String nombre, Pais pais) {
-		super();
 		this.nombre = nombre;
 		this.pais = pais;
 		lista.add(this);
@@ -25,9 +24,25 @@ public class Fabricante {
 	}
 	
 	//getters and setters
-	
+
+	public String getNombre() {
+		return this.nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Pais getPais() {
+		return pais;
+	}
+
+	public void setPais(Pais pais) {
+		this.pais = pais;
+	}
+
 	public int getCantidadFabricantes() {
-		return this.cantidadFabricantes;
+		return cantidadFabricantes;
 	}
 
 	public void setCantidadFabricantes(int cantidadFabricantes) {
@@ -41,32 +56,18 @@ public class Fabricante {
 	public static void setLista(ArrayList<Fabricante> lista) {
 		Fabricante.lista = lista;
 	}
-
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public Pais getPais() {
-		return pais;
-	}
-	public void setPais(Pais pais) {
-		this.pais = pais;
-	}
+	
 	
 	// Metodos maximo fabricante
 	
-	public static String fabricaMayorVentas() {
-		Fabricante ganador = new Fabricante();
+	public static Fabricante fabricaMayorVentas() {
+		Fabricante ganadorF = new Fabricante();
 		for(int i = 0; i < lista.size(); i++) {
-			if(lista.get(i).getCantidadFabricantes()> ganador.getCantidadFabricantes()) {
-				ganador = lista.get(i);
+			if(lista.get(i).getCantidadFabricantes() > ganadorF.getCantidadFabricantes()) {
+				ganadorF = lista.get(i);
 			}
 		}
-		return ganador.getNombre();
+		return ganadorF;
 	}
-	
-	
 
 }

@@ -20,7 +20,7 @@ public class Pais {
 	
 
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 
 	public void setNombre(String nombre) {
@@ -42,14 +42,14 @@ public class Pais {
 	// metodos
 	
 	
-	public static String paisMasVendedor() {
+	public static Pais paisMasVendedor() {
 		Pais ganador = new Pais();
 		for(int i = 0; i < listaP.size(); i++) {
 			if(listaP.get(i).getCantidadPaises()> ganador.getCantidadPaises()) {
 				ganador = listaP.get(i);
 			}
 		}
-		return ganador.getNombre();
+		return ganador;
 	}
 	
 }
