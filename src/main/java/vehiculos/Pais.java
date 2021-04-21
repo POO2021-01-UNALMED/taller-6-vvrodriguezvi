@@ -12,17 +12,15 @@ public class Pais {
 	public Pais(String nombre) {
 		this.nombre = nombre;
 		listaP.add(this);
-		cantidadPaises++;
 	}
 	public Pais() {
 		this.nombre = null;
 		listaP.add(this);
-		cantidadPaises++;
 	}
 	
 
 	public String getNombre() {
-		return this.nombre;
+		return nombre;
 	}
 
 	public void setNombre(String nombre) {
@@ -34,11 +32,12 @@ public class Pais {
 	public static void setListaP(ArrayList<Pais> listaP) {
 		Pais.listaP = listaP;
 	}
-	public int getCantidadPaises() {
-		return cantidadPaises;
+	public void fabricarVehiculo() {
+		this.cantidadPaises++;
 	}
-	public void setCantidadPaises(int cantidadPaises) {
-		this.cantidadPaises = cantidadPaises;
+	
+	public int getCantidadPaises() {
+		return this.cantidadPaises;
 	}
 	
 	// metodos

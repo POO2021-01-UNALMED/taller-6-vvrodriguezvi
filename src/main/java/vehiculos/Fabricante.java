@@ -14,14 +14,12 @@ public class Fabricante {
 		this.nombre = nombre;
 		this.pais = pais;
 		lista.add(this);
-		cantidadFabricantes++;
 	}
 	
 	public Fabricante() {
 		this.nombre = null;
 		this.pais = null;
 		lista.add(this);
-		cantidadFabricantes++;
 	}
 	
 	//getters and setters
@@ -35,19 +33,19 @@ public class Fabricante {
 	}
 
 	public Pais getPais() {
-		return pais;
+		return this.pais;
 	}
 
 	public void setPais(Pais pais) {
 		this.pais = pais;
 	}
 
-	public int getCantidadFabricantes() {
-		return cantidadFabricantes;
+	public void fabricarVehiculo() {
+		this.cantidadFabricantes++;
 	}
-
-	public void setCantidadFabricantes(int cantidadFabricantes) {
-		this.cantidadFabricantes = cantidadFabricantes;
+	
+	public int getCantidadFabricantes() {
+		return this.cantidadFabricantes;
 	}
 
 	public static ArrayList<Fabricante> getLista() {
