@@ -13,8 +13,7 @@ public class Pais {
 		this.nombre = nombre;
 		listaP.add(this);
 	}
-	public Pais() {
-		this.nombre = null;
+	public Pais() {      
 		listaP.add(this);
 	}
 	

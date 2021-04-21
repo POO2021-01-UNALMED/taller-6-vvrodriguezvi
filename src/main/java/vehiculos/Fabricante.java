@@ -17,8 +17,6 @@ public class Fabricante {
 	}
 	
 	public Fabricante() {
-		this.nombre = null;
-		this.pais = null;
 		lista.add(this);
 	}
 	

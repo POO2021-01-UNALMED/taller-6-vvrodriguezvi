@@ -8,6 +8,7 @@ public class Camioneta extends Vehiculo{
 	// constructores
 	
 	public Camioneta() {
+		super();
 		cantidadCamionetas++;
 	}
 	
