@@ -12,10 +12,12 @@ public class Pais {
 	public Pais(String nombre) {
 		this.nombre = nombre;
 		listaP.add(this);
+		cantidadPaises++;
 	}
 	public Pais() {
 		this.nombre = null;
 		listaP.add(this);
+		cantidadPaises++;
 	}
 	
 

@@ -14,13 +14,14 @@ public class Fabricante {
 		this.nombre = nombre;
 		this.pais = pais;
 		lista.add(this);
+		cantidadFabricantes++;
 	}
 	
 	public Fabricante() {
 		this.nombre = null;
 		this.pais = null;
 		lista.add(this);
-		
+		cantidadFabricantes++;
 	}
 	
 	//getters and setters
