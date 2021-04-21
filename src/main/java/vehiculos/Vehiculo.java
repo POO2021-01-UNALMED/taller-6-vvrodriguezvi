@@ -1,23 +1,24 @@
 package vehiculos;
 
-import java.util.ArrayList;
-
-
 
 public class Vehiculo {
-	String placa;
-	int puertas;
-	int velocidadMaxima;
-	String nombre; // como llaman al vehiculo
-	long precio;
-	long peso;
-	String traccion;
-	Fabricante fabricante;
+	private String placa;
+	private int puertas;
+	private int velocidadMaxima;
+	private String nombre; // como llaman al vehiculo
+	private long precio;
+	private long peso;
+	private String traccion;
+	private Fabricante fabricante;
 	private static int cantidadVehiculos = 0;
-	private ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
+	//private ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
+	
 	
 	// contructores
 	
+	public Vehiculo() {
+		cantidadVehiculos++;
+	}
 	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, long precio, long peso,
 			String traccion, Fabricante fabricante) {
 	
@@ -99,40 +100,24 @@ public class Vehiculo {
 		this.fabricante = fabricante;
 	}
 
+	// Cantidad Vehiculos
+	
 	public static int getCantidadVehiculos() {
 		return cantidadVehiculos;
 	}
-
-	public ArrayList<Vehiculo> getVehiculos() {
-		return vehiculos;
-	}
-
-	public void setVehiculos(ArrayList<Vehiculo> vehiculos) {
-		this.vehiculos = vehiculos;
-	}
-
 	public static void setCantidadVehiculos(int cantidadVehiculos) {
 		Vehiculo.cantidadVehiculos = cantidadVehiculos;
-	}
-	// cantidades de animales
 	
-		public void agregarVehiculos(Vehiculo nuevoVehiculo) {
-			vehiculos.add(nuevoVehiculo);
-			
-		}
-	public int cantidadVehiculos() {
-		return vehiculos.size();
+
+	// Vehiculos por tipo
+	
 	
 	}
-	
-	// Metodo CantidadVehiculos
-	
-	public  int cantidadTotalVehiculos() {
-		int total = 0;
-		for(int i = 0; i < (vehiculos.size()); i++) {
-				total = total + cantidadVehiculos();
-			}
-			return total;
+	public static String vehiculosPorTipo() {
+		return  "Automoviles: " + Automovil.cantidadAutomoviles() + "\n" +
+				"Camionetas: " + Camioneta.cantidadCamionetas() + "\n" +
+				"Camiones: " + Camion.cantidadCamiones();
+				
 	}
 	
 }

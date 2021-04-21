@@ -1,11 +1,16 @@
 package vehiculos;
 
 public class Camioneta extends Vehiculo{
-	boolean volco;
+	private boolean volco;
 	private static int cantidadCamionetas = 0;
 	
+	
 	// constructores
-
+	
+	public Camioneta() {
+		cantidadCamionetas++;
+	}
+	
 	public Camioneta(String placa, int puertas, String nombre, long precio, long peso,
 			Fabricante fabricante, boolean volco) {
 		super(placa, puertas, 90, nombre, precio, peso, "4X4" , fabricante);
@@ -32,6 +37,10 @@ public class Camioneta extends Vehiculo{
 	}
 	
 	// Metodos
+	
+	public static int cantidadCamionetas() {
+		return getCantidadCamionetas();
+	}
 
 	
 	
