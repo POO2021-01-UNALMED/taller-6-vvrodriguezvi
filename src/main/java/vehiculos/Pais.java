@@ -14,13 +14,13 @@ public class Pais {
 		listaP.add(this);
 	}
 	public Pais() {
-		
+		this.nombre = null;
 		listaP.add(this);
 	}
 	
 
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 
 	public void setNombre(String nombre) {

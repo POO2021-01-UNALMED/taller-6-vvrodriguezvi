@@ -17,6 +17,8 @@ public class Fabricante {
 	}
 	
 	public Fabricante() {
+		this.nombre = null;
+		this.pais = null;
 		lista.add(this);
 		
 	}
@@ -24,7 +26,7 @@ public class Fabricante {
 	//getters and setters
 
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 
 	public void setNombre(String nombre) {
